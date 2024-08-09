@@ -68,3 +68,7 @@ Este arquivo contém todas as funções JavaScript mencionadas acima e é refere
 
 <img src="img/cadastro.png" width=400px>
 
+# Autor 
+* `Geovana Aparecida de Lima`
+
+<img src="img/geovana.jpg" width=200px>
