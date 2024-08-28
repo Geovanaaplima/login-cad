@@ -11,21 +11,43 @@
     
 </head>
 <body>
-    <div class="container">
-        <label for="">Nome:</label>
-        <input type="text" class="form-control" id="nomeUser"><br>
-    <button type="button" onclick="salvarUser()" class="btn btn-success">Salvar</button>
 
+   
+    <!-- FORMULÁRIO DE CADASTRO ----------------------------------------------------------------------------->
+    <div class="view" id="formCad">
+        <div class="left">
+            <h1>Cadastrar-se</h1>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+            <div class="container col-4" id="formCadastro">
+
+                <form action="">
+                    <hr>
+                    <input type="text" name="" id="nomeUser" class="form-control" placeholder="Nome"
+                        maxlength="30"><!-- Campo de inserimento do nome-->
+                    <i class='bx bxs-user-check'></i>
+                    <input type="email" name="" id="emailUser" class="form-control" placeholder="Email"><!-- Campo de inserimento do nome-->
+                    <i class='bx bxs-user-check'></i>
+                    <div id="alert"></div>
+                    <!-- Campo que recebe mensagem de alerta caso o input não seja preenchido-->
+
+                    <button type="button" class="btn btn-info" onclick="salvarUser()">Enviar</button>
+                    <!--Botão de envio -->
+                </form>
+            </div> 
+
+
+        </div>
+        <!-- Div que contém valores cadastrados -->
+        <div class="right">
+
+            <h6 id="text">Seu cadastro aparecerá aqui...</h6>
+
+            <!-- TABELA DE VISUALIZAÇÃO DOS CADASTRADOS -->
+            <table class="table table-striped" id="tabela"></table>
+
+        </div>
     </div>
-    <br>
-    <div class="container">
-        <table class="table table-striped" id="tabela">
-            <tr>
-                <th>Nome Usúario</th>
-                <th>Ações</th>
-            </tr>
-        </table>
-    </div>
-    <script src='controller.js'></script>
+    <script src='javascript.js'></script>
 </body>
 </html>
