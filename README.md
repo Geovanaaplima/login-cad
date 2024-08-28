@@ -14,55 +14,55 @@
 
 *Professor*: [Leonardo Santiago Sidon da Rocha](https://github.com/LeonardoRochaMarista/)
 
-Este projeto consiste em uma simples aplicação web que permite aos usuários fazer login e gerenciar uma lista de nomes de usuários. O projeto inclui duas páginas HTML: uma página de login e uma página de cadastro. O código JavaScript associado realiza a validação dos campos de login e a manipulação da lista de usuários.
+# Descrição
+
+Este projeto consiste em um sistema de login e cadastro de usuários, desenvolvido com o intuito de demonstrar funcionalidades básicas de autenticação e gerenciamento de usuários em uma aplicação web. Ele permite que usuários façam login com suas credenciais e se cadastrem, armazenando as informações em arrays para simular um banco de dados simples.
+
+# Tecnologias Utilizadas
+
+- *HTML5*: Estrutura do projeto, incluindo os formulários de login e cadastro.
+- *CSS3*: Utilizado para estilizar os formulários e a tabela de visualização dos usuários cadastrados.
+- *JavaScript*: Implementação da lógica de validação, cadastro, edição e exclusão de usuários.
+
+# Estrutura do Projeto
+
+O projeto é composto por dois formulários principais:
+
+1. *Formulário de Login*: Permite que o usuário insira seu email e senha para acessar o sistema. Se os dados forem válidos, o usuário é redirecionado para a página de cadastro.
+   
+   - *Validação*: A função acessar() verifica se o email contém os caracteres '@' e '.' e se a senha foi preenchida. Se qualquer validação falhar, uma mensagem de erro é exibida.
+   
+2. *Formulário de Cadastro*: Permite que o usuário insira seu nome e email para se cadastrar no sistema. Os dados são armazenados em arrays (userLista e emaillista) e exibidos em uma tabela abaixo do formulário.
+
+   - *Salvamento e Validação*: A função salvarUser() verifica se os campos foram preenchidos corretamente e armazena os dados nos arrays. Se algum campo estiver vazio, uma mensagem de alerta é exibida.
 
 # Funcionalidades
 
-1. Validação de Acesso
+- *Login*:
+  - Validação de email e senha.
+  - Redirecionamento para a página de cadastro após login bem-sucedido.
 
-O código de validação de acesso é responsável por verificar se os campos de login (e-mail e senha) estão preenchidos. Caso os campos estejam preenchidos corretamente, o usuário é redirecionado para a página de cadastro. Caso contrário, uma mensagem de alerta é exibida solicitando o preenchimento de todos os campos.
+- *Cadastro*:
+  - Armazenamento de dados em arrays.
+  - Exibição dos dados cadastrados em uma tabela.
+  - Funções para editar e excluir usuários cadastrados.
 
-<img src="img/campo acessar.png" width=400px>
+## Como Usar
 
-2. Armazenamento de Nomes em um Array
+1. *Login*:
+   - Preencha o email e a senha no formulário de login.
+   - Clique em "ACESSAR" para validar as informações e ser redirecionado para a página de cadastro.
 
-A função `salvarUser` armazena os nomes dos usuários em um array (`dadoLista`). Se o nome do usuário for informado, ele é adicionado ao array, a lista é atualizada na tela, e o campo de entrada é limpo. Se o campo estiver vazio, uma mensagem de alerta é exibida solicitando que um nome seja informado. 
+2. *Cadastro*:
+   - Preencha o nome e email no formulário de cadastro.
+   - Clique em "Enviar" para adicionar os dados à tabela de usuários.
+   - Utilize os botões "Editar" e "Excluir" para modificar ou remover usuários da tabela.
 
-<img src="img/camposalvaruser.png" width=400px>
+## Considerações Finais
 
-3. Criação de Lista de Usuários
+Este sistema é um exemplo básico de um CRUD (Create, Read, Update, Delete) usando tecnologias de front-end. Ele pode ser expandido para incluir funcionalidades mais avançadas, como armazenamento em banco de dados, autenticação segura e integração com APIs.
 
-A função `criaLista` é responsável por gerar dinamicamente uma tabela HTML que exibe os nomes armazenados no array `dadoLista`. Além de exibir os nomes, a tabela também inclui botões para editar e excluir os usuários da lista.
-
-<img src="img/criarlista.png" width=400px>
-
-4. Edição de Usuários
-
-A função `editar` permite que o nome de um usuário seja editado. Quando o botão "Editar" é clicado, o nome do usuário correspondente é preenchido no campo de entrada para edição. Em seguida, o nome antigo é removido do array.
-
-<img src="img/editar.png" width=400px>
-
-5. Exclusão de Usuários
-
-A função excluir remove um nome da lista e também remove a linha correspondente da tabela HTML.
-
-<img src="img/excluir.png" width=400px>
-
-# Estrutura do Projeto 
-
-O projeto é composto por dois arquivos HTML (`login.html e cadastro.html`) e um arquivo JavaScript (`controller.js`) que contém todas as funções descritas acima.
-
-`login.html`
-
-Esta página contém o formulário de login. Quando o botão "ACESSAR" é clicado, a função `acessar()` é chamada para validar os campos e, se estiverem corretos, redirecionar para a página de cadastro.
-
-`cadastro.html`
-
-Esta página contém o formulário para inserir o nome do usuário e a tabela que exibe os nomes cadastrados. As funções `salvarUser()`, `criaLista()`, `editar()`, e `excluir()` são utilizadas nesta página para gerenciar a lista de usuários.
-
-`controller.js`
-
-Este arquivo contém todas as funções JavaScript mencionadas acima e é referenciado por ambas as páginas HTML.
+Para utilizar o sistema, basta abrir o arquivo HTML em um navegador web. O JavaScript incorporado irá gerenciar todas as funcionalidades diretamente no cliente, sem a necessidade de um servidor backend.
 
 <img src="img/login.png" width=400px>      
 
