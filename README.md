@@ -10,8 +10,6 @@
 
 *Disciplina:* Desensivolvimento Web
 
-
-
 *Professor*: [Leonardo Santiago Sidon da Rocha](https://github.com/LeonardoRochaMarista/)
 
 # Descrição
